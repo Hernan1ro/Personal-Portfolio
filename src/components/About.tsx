@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
-import { Briefcase, Code, Building2, Cpu } from "lucide-react";
+import { Briefcase, Code, Building2, Globe } from "lucide-react";
 import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import CounterAnimation from "./CounterAnimation";
@@ -12,8 +12,8 @@ export default function About() {
   const stats = [
     { icon: Briefcase, value: "6+", label: t.about.stats.experience },
     { icon: Code, value: "30+", label: t.about.stats.projects },
-    { icon: Building2, value: "3", label: t.about.stats.companies },
-    { icon: Cpu, value: "20+", label: t.about.stats.technologies },
+    { icon: Building2, value: "8", label: t.about.stats.companies },
+    { icon: Globe, value: "6", label: t.about.stats.countries },
   ];
 
   return (

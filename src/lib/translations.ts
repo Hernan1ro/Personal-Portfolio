@@ -28,7 +28,7 @@ const translations = {
         experience: "Years Experience",
         projects: "Projects Completed",
         companies: "Companies",
-        technologies: "Technologies",
+        countries: "Countries",
       },
     },
     experience: {
@@ -153,7 +153,7 @@ const translations = {
         experience: "Años de Experiencia",
         projects: "Proyectos Completados",
         companies: "Empresas",
-        technologies: "Tecnologías",
+        countries: "Países",
       },
     },
     experience: {

@@ -2,11 +2,18 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimatedSection from "./AnimatedSection";
+import Image from "next/image";
 
 const companies = [
-  { name: "SOFTIX S.A.S", color: "text-blue-400" },
-  { name: "Sabia Soluciones y Finanzas", color: "text-emerald-400" },
-  { name: "Customer Solutions", color: "text-purple-400" },
+  { name: "SOFTIX S.A.S", logo: "/images/companies/softix.png" },
+  { name: "Sabia Soluciones y Finanzas", logo: "/images/companies/sabia.png" },
+  { name: "Customer Solutions", logo: "/images/companies/customer_solutions.webp" },
+  { name: "Atlantic International University", logo: "/images/companies/atlantic.jpg" },
+  { name: "Ambit", logo: "/images/companies/ambit.png" },
+  { name: "Atenea", logo: "/images/companies/atenea.png" },
+  { name: "Paqari", logo: "/images/companies/paqari.png" },
+  { name: "USA Machinery", logo: "/images/companies/usa_machinery.svg" },
+  { name: "Sukabet", logo: "/images/companies/sukabet.jpg" },
 ];
 
 export default function Companies() {
@@ -37,15 +44,16 @@ export default function Companies() {
               key={`${company.name}-${index}`}
               className="flex-shrink-0 mx-8 flex items-center justify-center"
             >
-              <div className="flex items-center gap-3 px-8 py-5 rounded-xl bg-surface border border-border hover:border-primary/30 transition-colors duration-300">
-                <div
-                  className={`w-10 h-10 rounded-lg bg-surface-light flex items-center justify-center font-bold text-lg ${company.color}`}
-                >
-                  {company.name.charAt(0)}
+              <div className="px-8 py-6 rounded-xl bg-surface border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+                <div className="relative h-12 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <Image
+                    src={company.logo}
+                    alt={company.name}
+                    fill
+                    className="object-contain"
+                    unoptimized={company.logo.endsWith('.svg')}
+                  />
                 </div>
-                <span className="text-foreground font-medium whitespace-nowrap">
-                  {company.name}
-                </span>
               </div>
             </div>
           ))}
