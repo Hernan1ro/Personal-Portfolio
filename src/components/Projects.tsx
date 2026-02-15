@@ -5,6 +5,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { projects } from "@/lib/data";
 import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
+import AnimatedSection from "./AnimatedSection";
 
 export default function Projects() {
   const { t, locale } = useLanguage();
@@ -25,15 +26,16 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-surface/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">
             {t.projects.title}
           </h2>
           <p className="text-muted">{t.projects.subtitle}</p>
           <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
-        </div>
+        </AnimatedSection>
 
-        <div className="flex justify-center gap-2 mb-12 flex-wrap">
+        <AnimatedSection delay={0.2}>
+          <div className="flex justify-center gap-2 mb-12 flex-wrap">
           {filters.map((f) => (
             <button
               key={f.key}
@@ -52,7 +54,8 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <AnimatedSection delay={0.3}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayed.map((project) => (
             <div
               key={project.id}
@@ -114,7 +117,8 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        </AnimatedSection>
 
         {filtered.length > 6 && (
           <div className="text-center mt-10">
@@ -136,6 +140,7 @@ export default function Projects() {
             </button>
           </div>
         )}
+        </AnimatedSection>
       </div>
     </section>
   );

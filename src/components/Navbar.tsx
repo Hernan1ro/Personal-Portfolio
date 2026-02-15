@@ -2,12 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { Menu, X } from "lucide-react";
-
-const flags: Record<string, string> = {
-  en: "🇺🇸",
-  es: "🇪🇸",
-};
+import { Menu, X, Globe } from "lucide-react";
 
 export default function Navbar() {
   const { t, locale, toggleLocale } = useLanguage();
@@ -81,7 +76,7 @@ export default function Navbar() {
               className="ml-3 flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-border text-muted hover:text-foreground hover:border-primary/50 transition-colors duration-200"
               aria-label="Toggle language"
             >
-              <span className="text-base leading-none">{flags[locale]}</span>
+              <Globe size={14} />
               <span className="uppercase font-medium">{locale}</span>
             </button>
           </div>
@@ -92,7 +87,7 @@ export default function Navbar() {
               className="flex items-center gap-1 px-2 py-1.5 text-sm rounded-lg border border-border text-muted"
               aria-label="Toggle language"
             >
-              <span className="text-base leading-none">{flags[locale]}</span>
+              <Globe size={14} />
               <span className="uppercase text-xs font-medium">{locale}</span>
             </button>
             <button

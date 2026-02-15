@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import { MapPin, Calendar, Building } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 export default function Experience() {
   const { t } = useLanguage();
@@ -9,19 +10,20 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 bg-surface/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">
             {t.experience.title}
           </h2>
           <p className="text-muted">{t.experience.subtitle}</p>
           <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
-        </div>
+        </AnimatedSection>
 
         <div className="relative">
           <div className="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-border" />
 
           <div className="space-y-12">
             {t.experience.jobs.map((job, index) => (
+              <AnimatedSection key={index} delay={index * 0.2}>
               <div
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 ${
@@ -79,6 +81,7 @@ export default function Experience() {
 
                 <div className="hidden md:block flex-1" />
               </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>

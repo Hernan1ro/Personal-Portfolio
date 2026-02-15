@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Send, Mail, MapPin, Github, Linkedin } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -51,14 +52,14 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">{t.contact.title}</h2>
           <p className="text-muted">{t.contact.subtitle}</p>
           <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
-        </div>
+        </AnimatedSection>
 
         <div className="grid lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2 space-y-8">
+          <AnimatedSection direction="left" delay={0.2} className="lg:col-span-2 space-y-8">
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Mail className="w-5 h-5 text-primary" />
@@ -102,9 +103,9 @@ export default function Contact() {
                 <Linkedin size={18} />
               </a>
             </div>
-          </div>
+          </AnimatedSection>
 
-          <div className="lg:col-span-3">
+          <AnimatedSection direction="right" delay={0.2} className="lg:col-span-3">
             <form
               ref={formRef}
               onSubmit={handleSubmit}
@@ -161,7 +162,7 @@ export default function Contact() {
                 <p className="text-red-400 text-sm mt-2">{t.contact.errorSend}</p>
               )}
             </form>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

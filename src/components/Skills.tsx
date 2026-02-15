@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { skills } from "@/lib/data";
+import AnimatedSection from "./AnimatedSection";
 
 const skillColors: Record<string, string> = {
   html5: "text-orange-400 border-orange-400/30",
@@ -50,13 +51,14 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">{t.skills.title}</h2>
           <p className="text-muted">{t.skills.subtitle}</p>
           <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
-        </div>
+        </AnimatedSection>
 
-        <div className="flex justify-center gap-2 mb-12 flex-wrap">
+        <AnimatedSection delay={0.2}>
+          <div className="flex justify-center gap-2 mb-12 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat.key}
@@ -70,9 +72,11 @@ export default function Skills() {
               {cat.label}
             </button>
           ))}
-        </div>
+          </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <AnimatedSection delay={0.3}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {filtered.map((skill) => {
             const color = skillColors[skill.icon] || "text-primary border-primary/30";
             return (
@@ -89,7 +93,8 @@ export default function Skills() {
               </div>
             );
           })}
-        </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

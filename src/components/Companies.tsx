@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
+import AnimatedSection from "./AnimatedSection";
 
 const companies = [
   { name: "SOFTIX S.A.S", color: "text-blue-400" },
@@ -16,16 +17,17 @@ export default function Companies() {
   return (
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">
             {t.companies.title}
           </h2>
           <p className="text-muted">{t.companies.subtitle}</p>
           <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
-        </div>
+        </AnimatedSection>
       </div>
 
-      <div className="relative overflow-hidden">
+      <AnimatedSection delay={0.3}>
+        <div className="relative overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
 
@@ -48,7 +50,8 @@ export default function Companies() {
             </div>
           ))}
         </div>
-      </div>
+        </div>
+      </AnimatedSection>
     </section>
   );
 }
