@@ -16,6 +16,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html.light {
+  --color-background: #f8f9fc;
+  --color-foreground: #1a1a2e;
+  --color-primary: #4f46e5;
+  --color-primary-light: #6366f1;
+  --color-primary-dark: #4338ca;
+  --color-secondary: #0284c7;
+  --color-accent: #7c3aed;
+  --color-surface: #ffffff;
+  --color-surface-light: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -24,6 +38,7 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {

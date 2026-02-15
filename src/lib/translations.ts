@@ -11,16 +11,16 @@ const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: "Hernán Mercado",
-      role: "Frontend Developer",
+      role: "Full Stack Developer",
       description:
-        "Web developer with 6+ years of experience building high-quality user interfaces that are both beautiful and functional. Committed to collaborating with cross-functional teams to deliver impactful solutions.",
+        "Full Stack Developer with 6+ years of experience building high-quality web applications from frontend to backend. Committed to collaborating with cross-functional teams to deliver impactful solutions.",
       cta: "View My Work",
       contact: "Get In Touch",
     },
     about: {
       title: "About Me",
       subtitle: "Get to know me",
-      p1: "I'm a Frontend Developer with a strong focus on creating scalable, high-impact software solutions. With over 6 years of experience, I specialize in React, Next.js, and modern frontend technologies.",
+      p1: "I'm a Full Stack Developer with a strong focus on creating scalable, high-impact software solutions. With over 6 years of experience, I specialize in React, Next.js, Node.js, and modern web technologies.",
       p2: "Based in Colombia, I'm passionate about learning new technologies, building beautiful user interfaces, and creating digital products that make a real difference for businesses and their users.",
       p3: "I hold a degree in Industrial Engineering from the University of Magdalena, and I'm fluent in both English (C1) and Spanish (Native). This allows me to work effectively with international teams and clients.",
       downloadCv: "Download Resume",
@@ -37,7 +37,7 @@ const translations = {
       jobs: [
         {
           company: "SOFTIX S.A.S",
-          role: "Frontend Developer",
+          role: "Full Stack Developer",
           period: "Oct 2023 - May 2025",
           duration: "2 yrs 5 mos",
           location: "Bogotá, Colombia",
@@ -136,16 +136,16 @@ const translations = {
     hero: {
       greeting: "Hola, soy",
       name: "Hernán Mercado",
-      role: "Desarrollador Frontend",
+      role: "Desarrollador Full Stack",
       description:
-        "Desarrollador web con más de 6 años de experiencia creando interfaces de usuario de alta calidad, tanto estéticas como funcionales. Comprometido con la colaboración en equipos multidisciplinarios para entregar soluciones de impacto.",
+        "Desarrollador Full Stack con más de 6 años de experiencia creando aplicaciones web de alta calidad desde el frontend hasta el backend. Comprometido con la colaboración en equipos multidisciplinarios para entregar soluciones de impacto.",
       cta: "Ver Mi Trabajo",
       contact: "Contáctame",
     },
     about: {
       title: "Sobre Mí",
       subtitle: "Conóceme",
-      p1: "Soy un Desarrollador Frontend con un fuerte enfoque en crear soluciones de software escalables y de alto impacto. Con más de 6 años de experiencia, me especializo en React, Next.js y tecnologías frontend modernas.",
+      p1: "Soy un Desarrollador Full Stack con un fuerte enfoque en crear soluciones de software escalables y de alto impacto. Con más de 6 años de experiencia, me especializo en React, Next.js, Node.js y tecnologías web modernas.",
       p2: "Basado en Colombia, me apasiona aprender nuevas tecnologías, construir interfaces de usuario hermosas y crear productos digitales que marquen una diferencia real para las empresas y sus usuarios.",
       p3: "Tengo un título en Ingeniería Industrial de la Universidad del Magdalena, y domino tanto el inglés (C1) como el español (Nativo). Esto me permite trabajar efectivamente con equipos y clientes internacionales.",
       downloadCv: "Descargar CV",
@@ -162,7 +162,7 @@ const translations = {
       jobs: [
         {
           company: "SOFTIX S.A.S",
-          role: "Desarrollador Frontend",
+          role: "Desarrollador Full Stack",
           period: "Oct 2023 - May 2025",
           duration: "2 años 5 meses",
           location: "Bogotá, Colombia",

@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { Menu, X, Globe } from "lucide-react";
+import { useTheme } from "@/lib/ThemeContext";
+import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
   const { t, locale, toggleLocale } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -79,9 +81,23 @@ export default function Navbar() {
               <Globe size={14} />
               <span className="uppercase font-medium">{locale}</span>
             </button>
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-center w-9 h-9 rounded-lg border border-border text-muted hover:text-foreground hover:border-primary/50 transition-colors duration-200"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-center w-8 h-8 rounded-lg border border-border text-muted"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
+            </button>
             <button
               onClick={toggleLocale}
               className="flex items-center gap-1 px-2 py-1.5 text-sm rounded-lg border border-border text-muted"
