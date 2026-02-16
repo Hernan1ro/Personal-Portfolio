@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimatedSection from "./AnimatedSection";
-import { Briefcase, Code, Building2, Globe } from "lucide-react";
 import Image from "next/image";
 
 const companies = [

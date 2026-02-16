@@ -39,7 +39,7 @@ export default function Projects() {
                   src={project.gif}
                   alt={project.name}
                   fill
-                  className={`object-cover transition-all duration-500 group-hover:scale-105 ${hoveredId === project.id ? '' : 'grayscale-[30%] brightness-90'}`}
+                  className={`object-cover transition-all duration-500 group-hover:scale-105 ${hoveredId === project.id ? '' : 'grayscale-20 brightness-90'}`}
                   unoptimized
                 />
                 <div className="absolute inset-0 from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

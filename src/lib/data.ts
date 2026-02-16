@@ -34,7 +34,6 @@ export const skills: Skill[] = [
   { name: "Next.js", icon: "nextjs", category: "frontend" },
   { name: "Redux", icon: "redux", category: "frontend" },
   { name: "Tailwind CSS", icon: "tailwindcss", category: "frontend" },
-  { name: "Sass", icon: "sass", category: "frontend" },
   { name: "Vite", icon: "vite", category: "frontend" },
   { name: "Astro", icon: "astro", category: "frontend" },
   { name: "React Native", icon: "react", category: "frontend" },
@@ -44,13 +43,9 @@ export const skills: Skill[] = [
   { name: "Django", icon: "django", category: "backend" },
   { name: "MySQL", icon: "mysql", category: "backend" },
   { name: "PostgreSQL", icon: "postgresql", category: "backend" },
-  { name: "MongoDB", icon: "mongodb", category: "backend" },
-  { name: "Firebase", icon: "firebase", category: "backend" },
-  { name: "Git", icon: "git", category: "tools" },
   { name: "Docker", icon: "docker", category: "tools" },
   { name: "AWS", icon: "aws", category: "tools" },
   { name: "Figma", icon: "figma", category: "tools" },
-  { name: "Zustand", icon: "zustand", category: "tools" },
 ];
 
 export const projects: Project[] = [
