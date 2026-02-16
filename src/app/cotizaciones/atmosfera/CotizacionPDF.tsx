@@ -561,7 +561,7 @@ export default function CotizacionPDF() {
 
           <View style={styles.economicRow}>
             <Text style={styles.economicLabel}>Soporte técnico mensual (30 horas incluidas)</Text>
-            <Text style={styles.economicValue}>$400.000/mes</Text>
+            <Text style={styles.economicValue}>$490.000/mes</Text>
           </View>
           <Text style={{ fontSize: 7, color: "#94a3b8", marginTop: 4, paddingHorizontal: 10, lineHeight: 1.4 }}>
             Incluye: corrección de bugs, ajustes menores, monitoreo de servidores y atención a incidencias.
@@ -658,7 +658,7 @@ export default function CotizacionPDF() {
                 <Text style={{ fontSize: 9, fontFamily: "Helvetica-Bold", color: "#1a1a2e" }}>Soporte mensual post-lanzamiento</Text>
                 <Text style={{ fontSize: 7, color: "#64748b", marginTop: 2 }}>30 horas incluidas · Meses 4 y 5 gratuitos</Text>
               </View>
-              <Text style={{ fontSize: 11, fontFamily: "Helvetica-Bold", color: "#4f46e5" }}>$400.000/mes</Text>
+              <Text style={{ fontSize: 11, fontFamily: "Helvetica-Bold", color: "#4f46e5" }}>$490.000/mes</Text>
             </View>
             <Text style={{ fontSize: 7, color: "#64748b", marginTop: 4 }}>
               Los primeros 2 meses de soporte tras finalizar el desarrollo son gratuitos como garantía de estabilización.
@@ -671,7 +671,7 @@ export default function CotizacionPDF() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Soporte post-lanzamiento</Text>
           <Text style={{ fontSize: 8, color: "#64748b", marginBottom: 8 }}>
-            El plan de soporte mensual ($400.000 COP/mes) incluye 30 horas y cubre los siguientes tipos de asistencia.
+            El plan de soporte mensual ($490.000 COP/mes) incluye 30 horas y cubre los siguientes tipos de asistencia.
             Los primeros 2 meses posteriores al desarrollo son gratuitos como período de estabilización.
           </Text>
           <View style={{ flexDirection: "row", gap: 8, marginBottom: 10 }}>

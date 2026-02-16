@@ -253,7 +253,7 @@ export default function CotizacionPage() {
             <div className="bg-white/5 rounded-lg p-5 space-y-2 border border-white/10">
               <div className="flex justify-between items-center">
                 <span className="text-slate-300 text-sm">Soporte técnico mensual (30 horas incluidas)</span>
-                <span className="font-mono text-sm">$400.000/mes</span>
+                <span className="font-mono text-sm">$490.000/mes</span>
               </div>
               <p className="text-xs text-slate-400 mt-3 leading-relaxed">
                 Incluye: corrección de bugs, ajustes menores, monitoreo de servidores y atención a incidencias.
@@ -343,7 +343,7 @@ export default function CotizacionPage() {
                 <p className="text-sm font-semibold">Soporte mensual post-lanzamiento</p>
                 <p className="text-xs text-muted mt-1">30 horas incluidas · Meses 4 y 5 gratuitos</p>
               </div>
-              <p className="text-lg font-bold text-primary-light">$400.000/mes</p>
+              <p className="text-lg font-bold text-primary-light">$490.000/mes</p>
             </div>
             <p className="text-xs text-muted mt-2">
               Los primeros 2 meses de soporte tras finalizar el desarrollo son gratuitos como garantía de estabilización.
@@ -356,7 +356,7 @@ export default function CotizacionPage() {
         <section className="bg-surface rounded-xl border border-border p-8">
           <h2 className="text-2xl font-bold mb-6">Soporte post-lanzamiento</h2>
           <p className="text-muted text-sm mb-6">
-            El plan de soporte mensual ($400.000 COP/mes) incluye 30 horas y cubre los siguientes tipos de asistencia.
+            El plan de soporte mensual ($490.000 COP/mes) incluye 30 horas y cubre los siguientes tipos de asistencia.
             Los primeros 2 meses posteriores al desarrollo son gratuitos como período de estabilización.
           </p>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
