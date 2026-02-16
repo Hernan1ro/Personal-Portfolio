@@ -16,7 +16,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ["hero", "about", "experience", "projects", "skills", "contact"];
+      const sections = ["hero", "about", "projects", "experience", "skills", "contact"];
       for (const section of sections.reverse()) {
         const el = document.getElementById(section);
         if (el) {
@@ -36,8 +36,8 @@ export default function Navbar() {
   const navItems = [
     { href: "#hero", label: t.nav.home, id: "hero" },
     { href: "#about", label: t.nav.about, id: "about" },
-    { href: "#experience", label: t.nav.experience, id: "experience" },
     { href: "#projects", label: t.nav.projects, id: "projects" },
+    { href: "#experience", label: t.nav.experience, id: "experience" },
     { href: "#skills", label: t.nav.skills, id: "skills" },
     { href: "#contact", label: t.nav.contact, id: "contact" },
   ];
@@ -75,19 +75,19 @@ export default function Navbar() {
             ))}
             <button
               onClick={toggleLocale}
-              className="ml-3 flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-border text-muted hover:text-foreground hover:border-primary/50 transition-colors duration-200"
+              className="ml-3 cursor-pointer flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-border text-muted hover:text-foreground hover:border-primary/50 transition-colors duration-200"
               aria-label="Toggle language"
             >
               <Globe size={14} />
               <span className="uppercase font-medium">{locale}</span>
             </button>
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="flex items-center justify-center w-9 h-9 rounded-lg border border-border text-muted hover:text-foreground hover:border-primary/50 transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-            </button>
+            </button> */}
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
@@ -100,7 +100,7 @@ export default function Navbar() {
             </button>
             <button
               onClick={toggleLocale}
-              className="flex items-center gap-1 px-2 py-1.5 text-sm rounded-lg border border-border text-muted"
+              className="flex cursor-pointer items-center gap-1 px-2 py-1.5 text-sm rounded-lg border border-border text-muted"
               aria-label="Toggle language"
             >
               <Globe size={14} />

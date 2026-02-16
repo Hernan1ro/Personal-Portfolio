@@ -9,19 +9,10 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Projects() {
   const { t, locale } = useLanguage();
-  const [activeFilter, setActiveFilter] = useState("all");
   const [showAll, setShowAll] = useState(false);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-  const filters = [
-    { key: "all", label: t.projects.filterAll },
-    { key: "react", label: t.projects.filterReact },
-    { key: "javascript", label: t.projects.filterJavascript },
-    { key: "node", label: t.projects.filterNode },
-  ];
-
-  const filtered = projects.filter((p) => p.category.includes(activeFilter));
-  const displayed = showAll ? filtered : filtered.slice(0, 6);
+  const displayed = showAll ? projects : projects.slice(0, 6);
 
   return (
     <section id="projects" className="py-24 bg-surface/50">
@@ -35,26 +26,6 @@ export default function Projects() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <div className="flex justify-center gap-2 mb-12 flex-wrap">
-          {filters.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => {
-                setActiveFilter(f.key);
-                setShowAll(false);
-              }}
-              className={`px-4 py-2 text-sm rounded-lg font-medium transition-colors duration-200 ${
-                activeFilter === f.key
-                  ? "bg-primary text-white"
-                  : "bg-surface border border-border text-muted hover:text-foreground hover:border-primary/30"
-              }`}
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
-
-        <AnimatedSection delay={0.3}>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayed.map((project) => (
             <div
@@ -120,7 +91,7 @@ export default function Projects() {
           </div>
         </AnimatedSection>
 
-        {filtered.length > 6 && (
+        {projects.length > 6 && (
           <div className="text-center mt-10">
             <button
               onClick={() => setShowAll(!showAll)}
@@ -140,7 +111,6 @@ export default function Projects() {
             </button>
           </div>
         )}
-        </AnimatedSection>
       </div>
     </section>
   );
