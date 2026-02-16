@@ -23,10 +23,10 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className="flex items-center gap-1 text-sm text-muted">
+          {/* <div className="flex items-center gap-1 text-sm text-muted">
             {t.footer.builtWith}
             <Heart size={14} className="text-red-400 mx-1" />
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-3">
             <a

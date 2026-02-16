@@ -2,7 +2,9 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import AnimatedSection from "./AnimatedSection";
+import { Briefcase, Code, Building2, Globe } from "lucide-react";
 import Image from "next/image";
+import CounterAnimation from "./CounterAnimation";
 
 const companies = [
   { name: "SOFTIX S.A.S", logo: "/images/companies/softix.png" },
@@ -19,6 +21,13 @@ const companies = [
 export default function Companies() {
   const { t } = useLanguage();
 
+  const stats = [
+    { icon: Briefcase, value: "6+", label: t.about.stats.experience },
+    { icon: Code, value: "30+", label: t.about.stats.projects },
+    { icon: Building2, value: "8", label: t.about.stats.companies },
+    { icon: Globe, value: "6", label: t.about.stats.countries },
+  ];
+
   const duplicated = [...companies, ...companies, ...companies, ...companies];
 
   return (
@@ -32,7 +41,19 @@ export default function Companies() {
           <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </AnimatedSection>
       </div>
-
+      <AnimatedSection delay={0.3}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat, index) => (
+              <AnimatedSection key={stat.label} delay={0.1 * index}>
+                <div className="text-center p-6 rounded-xl bg-surface border border-border hover:border-primary/30 transition-colors duration-300">
+                  <stat.icon className="w-6 h-6 text-primary mx-auto mb-3" />
+                  <CounterAnimation value={stat.value} duration={2000} />
+                  <div className="text-sm text-muted">{stat.label}</div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </AnimatedSection>
       <AnimatedSection delay={0.3}>
         <div className="relative overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-background to-transparent z-10" />

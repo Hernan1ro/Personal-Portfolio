@@ -13,7 +13,7 @@ const translations = {
       name: "Hernán Mercado",
       role: "Full Stack Developer",
       description:
-        "Full Stack Developer with 6+ years of experience building high-quality web applications from frontend to backend. Committed to collaborating with cross-functional teams to deliver impactful solutions.",
+        "Full Stack Developer with 7+ years of experience building high-quality web applications from frontend to backend. Committed to collaborating with cross-functional teams to deliver impactful solutions.",
       cta: "View my work",
       contact: "Get in touch",
     },
