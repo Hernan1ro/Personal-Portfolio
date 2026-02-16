@@ -719,8 +719,7 @@ export default function CotizacionPDF() {
           <View style={{ marginTop: 10, padding: 8, backgroundColor: "#f8fafc", borderRadius: 4, borderWidth: 1, borderColor: "#e2e8f0" }}>
             <Text style={{ fontSize: 8, fontFamily: "Helvetica-Bold", color: "#1a1a2e", marginBottom: 3 }}>Ajuste anual del valor de soporte</Text>
             <Text style={{ fontSize: 7, color: "#64748b", lineHeight: 1.4 }}>
-              El valor del soporte mensual se ajustará anualmente en el mismo porcentaje de incremento del salario mínimo
-              legal vigente (SMLV) en Colombia, aplicable a partir de enero de cada año.
+              El valor del soporte mensual se ajustará anualmente en el mismo porcentaje de incremento del índice de precios al consumidor (IPC) en Colombia, aplicable a partir de enero de cada año.
             </Text>
           </View>
           <View style={{ marginTop: 6, padding: 8, backgroundColor: "#f0fdf4", borderRadius: 4, borderWidth: 1, borderColor: "#bbf7d0" }}>
