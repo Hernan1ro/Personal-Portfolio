@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     "Hernán Mercado",
   ],
   authors: [{ name: "Hernán Mercado" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/images/profile.jpeg",
+  },
   openGraph: {
     title: "Hernán Mercado | Full Stack Developer",
     description:

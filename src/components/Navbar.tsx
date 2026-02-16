@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { useTheme } from "@/lib/ThemeContext";
 import { Menu, X, Globe, Sun, Moon } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const { t, locale, toggleLocale } = useLanguage();
@@ -54,9 +55,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <a
             href="#hero"
-            className="text-xl font-bold text-primary-light tracking-tight font-mono"
+            className="flex items-center"
           >
-            {"{ H }"}
+            <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary/50 hover:border-primary transition-colors">
+              <Image
+                src="/images/profile.jpeg"
+                alt="Hernán Mercado"
+                fill
+                className="object-cover"
+              />
+            </div>
           </a>
 
           <div className="hidden md:flex items-center gap-1">

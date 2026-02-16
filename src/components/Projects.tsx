@@ -34,15 +34,13 @@ export default function Projects() {
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              <div className="relative aspect-video overflow-hidden">
+              <div className="relative aspect-video overflow-hidden bg-muted">
                 <Image
-                  src={
-                    hoveredId === project.id ? project.gif : project.image
-                  }
+                  src={project.gif}
                   alt={project.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  unoptimized={hoveredId === project.id}
+                  className={`object-cover transition-all duration-500 group-hover:scale-105 ${hoveredId === project.id ? '' : 'grayscale-[30%] brightness-90'}`}
+                  unoptimized
                 />
                 <div className="absolute inset-0 from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -56,15 +54,17 @@ export default function Projects() {
                     <ExternalLink size={12} />
                     {t.projects.viewDemo}
                   </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-light hover:bg-border text-foreground text-xs rounded-lg font-medium transition-colors border border-border"
-                  >
-                    <Github size={12} />
-                    {t.projects.viewCode}
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-light hover:bg-border text-foreground text-xs rounded-lg font-medium transition-colors border border-border"
+                    >
+                      <Github size={12} />
+                      {t.projects.viewCode}
+                    </a>
+                  )}
                 </div>
               </div>
 
