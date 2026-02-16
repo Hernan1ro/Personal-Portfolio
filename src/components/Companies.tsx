@@ -25,7 +25,7 @@ export default function Companies() {
   const duplicated = [...companies, ...companies, ...companies, ...companies];
 
   return (
-    <section className="py-20">
+    <section id="companies" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">

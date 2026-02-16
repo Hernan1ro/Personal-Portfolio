@@ -3,6 +3,7 @@ const translations = {
     nav: {
       home: "Home",
       about: "About",
+      companies: "Companies",
       experience: "Experience",
       skills: "Skills",
       projects: "Projects",
@@ -128,6 +129,7 @@ const translations = {
     nav: {
       home: "Inicio",
       about: "Sobre mí",
+      companies: "Empresas",
       experience: "Experiencia",
       skills: "Habilidades",
       projects: "Proyectos",

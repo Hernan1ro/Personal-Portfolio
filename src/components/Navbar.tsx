@@ -17,8 +17,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ["hero", "about", "projects", "experience", "skills", "contact"];
-      for (const section of sections.reverse()) {
+      const sections = ["contact", "skills", "experience", "companies", "projects", "about", "hero"];
+      for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
           const rect = el.getBoundingClientRect();
@@ -38,6 +38,7 @@ export default function Navbar() {
     { href: "#hero", label: t.nav.home, id: "hero" },
     { href: "#about", label: t.nav.about, id: "about" },
     { href: "#projects", label: t.nav.projects, id: "projects" },
+    { href: "#companies", label: t.nav.companies, id: "companies" },
     { href: "#experience", label: t.nav.experience, id: "experience" },
     { href: "#skills", label: t.nav.skills, id: "skills" },
     { href: "#contact", label: t.nav.contact, id: "contact" },
