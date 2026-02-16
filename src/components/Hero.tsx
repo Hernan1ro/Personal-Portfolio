@@ -42,7 +42,7 @@ export default function Hero() {
     >
       {/* Animated gradient backgrounds */}
       <motion.div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-primary)/15%,_transparent_50%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--color-primary)/15%,transparent_50%)]"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -54,7 +54,7 @@ export default function Hero() {
         }}
       />
       <motion.div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--color-secondary)/10%,_transparent_50%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,var(--color-secondary)/10%,transparent_50%)]"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.2, 0.4, 0.2],
@@ -156,7 +156,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="flex-shrink-0"
+            className="shrink-0"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -172,7 +172,7 @@ export default function Hero() {
                 ease: "easeInOut",
               }}
             >
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-2xl" />
+              <div className="absolute inset-0 rounded-full bg-linear-to-br from-primary/30 to-secondary/30 blur-2xl" />
               <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-border">
                 <Image
                   src="/images/profile.jpeg"

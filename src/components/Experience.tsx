@@ -71,7 +71,7 @@ export default function Experience() {
                           key={i}
                           className="text-sm text-muted flex items-start gap-2"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
                           {resp}
                         </li>
                       ))}

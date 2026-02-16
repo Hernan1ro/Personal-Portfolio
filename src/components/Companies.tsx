@@ -35,14 +35,14 @@ export default function Companies() {
 
       <AnimatedSection delay={0.3}>
         <div className="relative overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-background to-transparent z-10" />
 
         <div className="flex animate-scroll-left" style={{ width: "fit-content" }}>
           {duplicated.map((company, index) => (
             <div
               key={`${company.name}-${index}`}
-              className="flex-shrink-0 mx-8 flex items-center justify-center"
+              className="shrink-0 mx-8 flex items-center justify-center"
             >
               <div className="px-8 py-6 rounded-xl bg-surface border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
                 <div className="relative h-12 w-32 hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
