@@ -13,7 +13,7 @@ export default function About() {
     { icon: Briefcase, value: "7+", label: t.about.stats.experience },
     { icon: Code, value: "30+", label: t.about.stats.projects },
     { icon: Building2, value: "8", label: t.about.stats.companies },
-    { icon: Globe, value: "6", label: t.about.stats.countries },
+    { icon: Globe, value: "5", label: t.about.stats.countries },
   ];
 
   return (
@@ -48,27 +48,28 @@ export default function About() {
           </AnimatedSection>
 
           <AnimatedSection direction="right" delay={0.2}>
-            <div className="space-y-5">
+            <div className="space-y-5 mb-8">
               <p className="text-muted leading-relaxed">{t.about.p1}</p>
               <p className="text-muted leading-relaxed">{t.about.p2}</p>
-              <p className="text-muted leading-relaxed">{t.about.p3}</p>
+              {/* <p className="text-muted leading-relaxed">{t.about.p3}</p> */}
+            </div>
+
+            <div className="grid grid-cols-4 gap-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="text-center p-3 rounded-lg bg-surface border border-border hover:border-primary/30 transition-colors duration-300"
+                >
+                  <stat.icon className="w-4 h-4 text-primary mx-auto mb-1" />
+                  <div className="text-lg font-semibold">
+                    <CounterAnimation value={stat.value} duration={2000} />
+                  </div>
+                  <div className="text-[10px] text-muted leading-tight">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </AnimatedSection>
         </div>
-
-        <AnimatedSection delay={0.3}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <AnimatedSection key={stat.label} delay={0.1 * index}>
-                <div className="text-center p-6 rounded-xl bg-surface border border-border hover:border-primary/30 transition-colors duration-300">
-                  <stat.icon className="w-6 h-6 text-primary mx-auto mb-3" />
-                  <CounterAnimation value={stat.value} duration={2000} />
-                  <div className="text-sm text-muted">{stat.label}</div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </AnimatedSection>
       </div>
     </section>
   );
