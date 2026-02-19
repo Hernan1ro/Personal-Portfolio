@@ -27,22 +27,15 @@ export default function About() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <AnimatedSection direction="left" delay={0.2}>
-            <div className="relative mx-auto lg:mx-0">
-              <div className="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden border border-border z-10">
+            <div className="relative mx-auto lg:mx-0 w-full max-w-md">
+              <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden border border-border">
                 <Image
-                  src="/images/profile.jpeg"
-                  alt="Hernán Mercado"
+                  src="/images/working.jpg"
+                  alt="Hernán Mercado working"
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden border border-border opacity-80">
-                <Image
-                  src="/images/desk.jpg"
-                  alt="Workspace"
-                  fill
-                  className="object-cover"
-                />
+                <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
               </div>
             </div>
           </AnimatedSection>
@@ -54,17 +47,17 @@ export default function About() {
               {/* <p className="text-muted leading-relaxed">{t.about.p3}</p> */}
             </div>
 
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="text-center p-3 rounded-lg bg-surface border border-border hover:border-primary/30 transition-colors duration-300"
+                  className="text-center p-4 sm:p-3 rounded-lg bg-surface border border-border hover:border-primary/30 transition-colors duration-300"
                 >
-                  <stat.icon className="w-4 h-4 text-primary mx-auto mb-1" />
-                  <div className="text-lg font-semibold">
+                  <stat.icon className="w-5 h-5 sm:w-4 sm:h-4 text-primary mx-auto mb-2 sm:mb-1" />
+                  <div className="text-2xl sm:text-lg font-semibold">
                     <CounterAnimation value={stat.value} duration={2000} />
                   </div>
-                  <div className="text-[10px] text-muted leading-tight">{stat.label}</div>
+                  <div className="text-xs sm:text-[10px] text-muted leading-tight">{stat.label}</div>
                 </div>
               ))}
             </div>

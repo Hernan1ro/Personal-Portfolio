@@ -2,13 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useTheme } from "@/lib/ThemeContext";
-import { Menu, X, Globe, Sun, Moon } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import Image from "next/image";
 
 export default function Navbar() {
   const { t, locale, toggleLocale } = useLanguage();
-  const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -36,9 +34,9 @@ export default function Navbar() {
 
   const navItems = [
     { href: "#hero", label: t.nav.home, id: "hero" },
+    { href: "#companies", label: t.nav.companies, id: "companies" },
     { href: "#about", label: t.nav.about, id: "about" },
     { href: "#projects", label: t.nav.projects, id: "projects" },
-    { href: "#companies", label: t.nav.companies, id: "companies" },
     { href: "#experience", label: t.nav.experience, id: "experience" },
     { href: "#skills", label: t.nav.skills, id: "skills" },
     { href: "#contact", label: t.nav.contact, id: "contact" },
@@ -47,7 +45,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || isOpen
           ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
           : "bg-transparent"
       }`}
@@ -100,13 +98,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={toggleTheme}
-              className="flex items-center justify-center w-8 h-8 rounded-lg border border-border text-muted"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
-            </button>
             <button
               onClick={toggleLocale}
               className="flex cursor-pointer items-center gap-1 px-2 py-1.5 text-sm rounded-lg border border-border text-muted"
