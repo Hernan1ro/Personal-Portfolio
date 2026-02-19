@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center space-y-8">
-        <div className="relative w-full aspect-[4/3] max-w-md mx-auto rounded-2xl overflow-hidden border border-border shadow-2xl shadow-primary/5">
+        <div className="relative w-full aspect-4/3 max-w-md mx-auto rounded-2xl overflow-hidden border border-border shadow-2xl shadow-primary/5">
           <Image
             src="/images/desk.jpg"
             alt="Escritorio de trabajo"
@@ -13,7 +13,7 @@ export default function NotFound() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
           <div className="absolute bottom-4 left-0 right-0 px-6">
             <p className="text-7xl font-bold text-primary-light drop-shadow-lg">404</p>
           </div>

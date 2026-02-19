@@ -224,7 +224,7 @@ export default function CotizacionPage() {
 
         {/* Propuesta económica */}
         <section className="bg-surface rounded-xl border border-border overflow-hidden">
-          <div className="bg-gradient-to-br from-[#0a0a1a] to-[#111128] p-8 text-white">
+          <div className="bg-linear-to-br from-[#0a0a1a] to-[#111128] p-8 text-white">
             <h2 className="text-2xl font-bold mb-6">Propuesta económica</h2>
 
             <p className="text-sm text-slate-400 mb-4">Desarrollo del sistema (3 meses)</p>
