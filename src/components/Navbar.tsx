@@ -15,7 +15,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ["contact", "skills", "experience", "companies", "projects", "about", "hero"];
+      const sections = ["contact", "skills", "experience", "projects", "about", "companies", "hero"];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
