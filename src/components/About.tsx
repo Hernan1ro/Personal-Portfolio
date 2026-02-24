@@ -12,7 +12,7 @@ export default function About() {
   const stats = [
     { icon: Briefcase, value: "7+", label: t.about.stats.experience },
     { icon: Code, value: "30+", label: t.about.stats.projects },
-    { icon: Building2, value: "8", label: t.about.stats.companies },
+    { icon: Building2, value: "7", label: t.about.stats.companies },
     { icon: Globe, value: "5", label: t.about.stats.countries },
   ];
 

@@ -12,7 +12,7 @@ const companies = [
   { name: "Ambit", logo: "/images/companies/ambit.png" },
   { name: "Atenea", logo: "/images/companies/atenea.png" },
   { name: "Paqari", logo: "/images/companies/paqari.jpg" },
-  { name: "USA Machinery", logo: "/images/companies/usa_machinery.svg" },
+  // { name: "USA Machinery", logo: "/images/companies/usa_machinery.svg" },
   { name: "Sukabet", logo: "/images/companies/sukabet.jpg" },
 ];
 
